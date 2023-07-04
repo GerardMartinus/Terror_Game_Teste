@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject player;
     public float distance;
-    float speed = 2f;
+    float speed = 4f;
     float distancePlayer = 150;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         distancePlayer = Vector3.Distance(transform.position, player.transform.position);
 
         if(distancePlayer < distance){
-            player.transform.position = new Vector3(4, 0, 4);
+            player.transform.position = new Vector3(0, 0, -205.5f);
         }
 
         FollowThePlayer();
